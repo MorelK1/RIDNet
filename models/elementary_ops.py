@@ -39,11 +39,11 @@ class BasicBlocSig(nn.Module):
         return self.body(x)
 
 # l'unite de fusion (Merge and Run Module)
-class Merge_And_Run_Dual(nn.Module):
+class MergeAndRunDual(nn.Module):
     def __init__(self,
                  in_channels, out_channels,
                  ksize=3, stride=1, pad=1, dilation=1):
-        super(Merge_And_Run_Dual, self).__init__()
+        super(MergeAndRunDual, self).__init__()
 
         self.part1 = nn.Sequential(
             nn.Conv2d(in_channels, out_channels, ksize, stride, pad),
